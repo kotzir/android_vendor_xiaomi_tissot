@@ -30,6 +30,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/bin/irsc_util:system/bin/irsc_util \
     vendor/xiaomi/tissot/proprietary/bin/loc_launcher:system/bin/loc_launcher \
     vendor/xiaomi/tissot/proprietary/bin/lowi-server:system/bin/lowi-server \
+    vendor/xiaomi/tissot/proprietary/bin/mm-qcamera-app:system/bin/mm-qcamera-app \
     vendor/xiaomi/tissot/proprietary/bin/mm-qcamera-daemon:system/bin/mm-qcamera-daemon \
     vendor/xiaomi/tissot/proprietary/bin/msm_irqbalance:system/bin/msm_irqbalance \
     vendor/xiaomi/tissot/proprietary/bin/netmgrd:system/bin/netmgrd \
@@ -120,7 +121,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/etc/permissions/ConnectivityExt.xml:system/etc/permissions/ConnectivityExt.xml \
     vendor/xiaomi/tissot/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
     vendor/xiaomi/tissot/proprietary/etc/permissions/com.qti.dpmframework.xml:system/etc/permissions/com.qti.dpmframework.xml \
-    vendor/xiaomi/tissot/proprietary/etc/permissions/com.qti.location.sdk.xml:system/etc/permissions/com.qti.location.sdk.xml \
     vendor/xiaomi/tissot/proprietary/etc/permissions/com.qualcomm.location.vzw_library.xml:system/etc/permissions/com.qualcomm.location.vzw_library.xml \
     vendor/xiaomi/tissot/proprietary/etc/permissions/com.qualcomm.location.xml:system/etc/permissions/com.qualcomm.location.xml \
     vendor/xiaomi/tissot/proprietary/etc/permissions/com.quicinc.cne.xml:system/etc/permissions/com.quicinc.cne.xml \
@@ -131,8 +131,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
     vendor/xiaomi/tissot/proprietary/etc/permissions/qti_permissions.xml:system/etc/permissions/qti_permissions.xml \
     vendor/xiaomi/tissot/proprietary/etc/permissions/telephonyservice.xml:system/etc/permissions/telephonyservice.xml \
-    vendor/xiaomi/tissot/proprietary/etc/qdcm_calib_data_nt35532_fhd_video_mode_dsi_panel.xml:system/etc/qdcm_calib_data_nt35532_fhd_video_mode_dsi_panel.xml \
-    vendor/xiaomi/tissot/proprietary/etc/qdcm_calib_data_nt35596_tianma_fhd_video_mode_dsi_panel.xml:system/etc/qdcm_calib_data_nt35596_tianma_fhd_video_mode_dsi_panel.xml \
     vendor/xiaomi/tissot/proprietary/etc/surround_sound_3mic/surround_sound_rec_5.1.cfg:system/etc/surround_sound_3mic/surround_sound_rec_5.1.cfg \
     vendor/xiaomi/tissot/proprietary/etc/surround_sound_3mic/surround_sound_rec_AZ.cfg:system/etc/surround_sound_3mic/surround_sound_rec_AZ.cfg \
     vendor/xiaomi/tissot/proprietary/etc/xtra_root_cert.pem:system/etc/xtra_root_cert.pem \
@@ -148,7 +146,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/framework/embmslibrary.jar:system/framework/embmslibrary.jar \
     vendor/xiaomi/tissot/proprietary/framework/imscmlibrary.jar:system/framework/imscmlibrary.jar \
     vendor/xiaomi/tissot/proprietary/framework/izat.xt.srv.jar:system/framework/izat.xt.srv.jar \
-    vendor/xiaomi/tissot/proprietary/framework/qcrilhook.jar:system/framework/qcrilhook.jar \
     vendor/xiaomi/tissot/proprietary/framework/qti-telephony-common.jar:system/framework/qti-telephony-common.jar \
     vendor/xiaomi/tissot/proprietary/framework/rcsimssettings.jar:system/framework/rcsimssettings.jar \
     vendor/xiaomi/tissot/proprietary/framework/tcmclient.jar:system/framework/tcmclient.jar \
@@ -247,6 +244,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libactuator_dw9763_ov12a10.so:system/vendor/lib/libactuator_dw9763_ov12a10.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libactuator_dw9763_ov13880.so:system/vendor/lib/libactuator_dw9763_ov13880.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libactuator_pseudo.so:system/vendor/lib/libactuator_pseudo.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/libadiertac.so:system/vendor/lib/libadiertac.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libadm.so:system/vendor/lib/libadm.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libadpcmdec.so:system/vendor/lib/libadpcmdec.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libadreno_utils.so:system/vendor/lib/libadreno_utils.so \
@@ -704,7 +702,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/vendor/lib/librs_adreno_sha1.so:system/vendor/lib/librs_adreno_sha1.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libscale.so:system/vendor/lib/libscale.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libsd_sdk_display.so:system/vendor/lib/libsd_sdk_display.so \
-    vendor/xiaomi/tissot/proprietary/vendor/lib/libsdm-disp-apis.so:system/vendor/lib/libsdm-disp-apis.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libsdsprpc.so:system/vendor/lib/libsdsprpc.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libsecureui.so:system/vendor/lib/libsecureui.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libsecureui_svcsock.so:system/vendor/lib/libsecureui_svcsock.so \
@@ -718,10 +715,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libssd.so:system/vendor/lib/libssd.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libsurround_3mic_proc.so:system/vendor/lib/libsurround_3mic_proc.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libthermalclient.so:system/vendor/lib/libthermalclient.so \
-    vendor/xiaomi/tissot/proprietary/vendor/lib/libtime_genoff.so:system/vendor/lib/libtime_genoff.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libtrueportrait.so:system/vendor/lib/libtrueportrait.so \
-    vendor/xiaomi/tissot/proprietary/vendor/lib/libts_detected_face_hal.so:system/vendor/lib/libts_detected_face_hal.so \
-    vendor/xiaomi/tissot/proprietary/vendor/lib/libts_face_beautify_hal.so:system/vendor/lib/libts_face_beautify_hal.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libtzdrmgenprov.so:system/vendor/lib/libtzdrmgenprov.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libubifocus.so:system/vendor/lib/libubifocus.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/libulp2.so:system/vendor/lib/libulp2.so \
@@ -745,6 +739,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so:system/vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/rfsa/adsp/libscveT2T_skel.so:system/vendor/lib/rfsa/adsp/libscveT2T_skel.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/rfsa/adsp/libscveTextReco_skel.so:system/vendor/lib/rfsa/adsp/libscveTextReco_skel.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/sensor_calibrate.so:system/vendor/lib/sensor_calibrate.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib/sensors.ssc.so:system/vendor/lib/sensors.ssc.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/soundfx/libqcbassboost.so:system/vendor/lib/soundfx/libqcbassboost.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/soundfx/libqcreverb.so:system/vendor/lib/soundfx/libqcreverb.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib/soundfx/libqcvirt.so:system/vendor/lib/soundfx/libqcvirt.so \
@@ -901,7 +897,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libsd_sdk_display.so:system/vendor/lib64/libsd_sdk_display.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libsdm-color.so:system/vendor/lib64/libsdm-color.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libsdm-diag.so:system/vendor/lib64/libsdm-diag.so \
-    vendor/xiaomi/tissot/proprietary/vendor/lib64/libsdm-disp-apis.so:system/vendor/lib64/libsdm-disp-apis.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libsdmextension.so:system/vendor/lib64/libsdmextension.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libsdsprpc.so:system/vendor/lib64/libsdsprpc.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libsecureui.so:system/vendor/lib64/libsecureui.so \
@@ -916,7 +911,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libsystem_health_mon.so:system/vendor/lib64/libsystem_health_mon.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libthermalclient.so:system/vendor/lib64/libthermalclient.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libthermalioctl.so:system/vendor/lib64/libthermalioctl.so \
-    vendor/xiaomi/tissot/proprietary/vendor/lib64/libtime_genoff.so:system/vendor/lib64/libtime_genoff.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libtzdrmgenprov.so:system/vendor/lib64/libtzdrmgenprov.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libulp2.so:system/vendor/lib64/libulp2.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libvendorconn.so:system/vendor/lib64/libvendorconn.so \
@@ -927,12 +921,18 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libxt_native.so:system/vendor/lib64/libxt_native.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libxtadapter.so:system/vendor/lib64/libxtadapter.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/libxtwifi_ulp_adaptor.so:system/vendor/lib64/libxtwifi_ulp_adaptor.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/sensor_calibrate.so:system/vendor/lib64/sensor_calibrate.so \
+    vendor/xiaomi/tissot/proprietary/vendor/lib64/sensors.ssc.so:system/vendor/lib64/sensors.ssc.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/soundfx/libqcbassboost.so:system/vendor/lib64/soundfx/libqcbassboost.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/soundfx/libqcreverb.so:system/vendor/lib64/soundfx/libqcreverb.so \
     vendor/xiaomi/tissot/proprietary/vendor/lib64/soundfx/libqcvirt.so:system/vendor/lib64/soundfx/libqcvirt.so \
     vendor/xiaomi/tissot/proprietary/vendor/qcril.db:system/vendor/qcril.db
 
 PRODUCT_PACKAGES += \
+    libsdm-disp-apis \
+    libtime_genoff \
+    libts_detected_face_hal \
+    libts_face_beautify_hal \
     QtiTelephonyService \
     TimeService \
     datastatusnotification \
@@ -944,4 +944,8 @@ PRODUCT_PACKAGES += \
     com.qualcomm.location \
     qcrilmsgtunnel \
     ims \
-    imssettings
+    imssettings \
+    qcrilhook \
+    com.qti.location.sdk \
+    qdcm_calib_data_nt35532_fhd_video_mode_dsi_panel \
+    qdcm_calib_data_nt35596_tianma_fhd_video_mode_dsi_panel

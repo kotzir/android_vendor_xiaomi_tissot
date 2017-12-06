@@ -19,6 +19,52 @@ LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_DEVICE),tissot)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := libsdm-disp-apis
+LOCAL_MODULE_OWNER := xiaomi
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libsdm-disp-apis.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libsdm-disp-apis.so
+LOCAL_MULTILIB := both
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libtime_genoff
+LOCAL_MODULE_OWNER := xiaomi
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libtime_genoff.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libtime_genoff.so
+LOCAL_MULTILIB := both
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libts_detected_face_hal
+LOCAL_MODULE_OWNER := xiaomi
+LOCAL_SRC_FILES := proprietary/vendor/lib/libts_detected_face_hal.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libts_face_beautify_hal
+LOCAL_MODULE_OWNER := xiaomi
+LOCAL_SRC_FILES := proprietary/vendor/lib/libts_face_beautify_hal.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := QtiTelephonyService
 LOCAL_MODULE_OWNER := xiaomi
 LOCAL_SRC_FILES := proprietary/app/QtiTelephonyService/QtiTelephonyService.apk
@@ -154,6 +200,43 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_SUFFIX := .apk
 LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := qcrilhook
+LOCAL_MODULE_OWNER := xiaomi
+LOCAL_SRC_FILES := proprietary/framework/qcrilhook.jar
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_SUFFIX := .jar
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := com.qti.location.sdk
+LOCAL_MODULE_OWNER := xiaomi
+LOCAL_SRC_FILES := proprietary/etc/permissions/com.qti.location.sdk.xml
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_SUFFIX := .xml
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := qdcm_calib_data_nt35532_fhd_video_mode_dsi_panel
+LOCAL_MODULE_OWNER := xiaomi
+LOCAL_SRC_FILES := proprietary/etc/qdcm_calib_data_nt35532_fhd_video_mode_dsi_panel.xml
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_SUFFIX := .xml
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := qdcm_calib_data_nt35596_tianma_fhd_video_mode_dsi_panel
+LOCAL_MODULE_OWNER := xiaomi
+LOCAL_SRC_FILES := proprietary/etc/qdcm_calib_data_nt35596_tianma_fhd_video_mode_dsi_panel.xml
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_SUFFIX := .xml
 include $(BUILD_PREBUILT)
 
 endif
